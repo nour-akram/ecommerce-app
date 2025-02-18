@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment.development';
 })
 export class ProductsFromApiService {
   baseURL = `${environment.baseUrl}/products`;
- 
+
   constructor(private httpClinet: HttpClient) {}
 
   getAllProductsFromApi(): Observable<IProduct[]> {
@@ -38,23 +38,23 @@ export class ProductsFromApiService {
     return tokenCookie ? tokenCookie.split('=')[1] : null;
   }
 
-  const token = this.getTokenFromCookies();
+   token = this.getTokenFromCookies();
   addProduct(productData: FormData): Observable<any> {
     // console.log(token);
-    const headers = new HttpHeaders().set('Authorization', `${token}`);
+    const headers = new HttpHeaders().set('Authorization', `${this.token}`);
     return this.httpClinet.post(`${this.baseURL}`, productData, { headers });
   }
 
 
   updateProductByID(id: string, productData: FormData): Observable<any> {
-    const headers = new HttpHeaders().set('Authorization', `${token}`);
+    const headers = new HttpHeaders().set('Authorization', `${this.token}`);
 
     return this.httpClinet.patch(`${this.baseURL}/${id}`, productData, { headers });
   }
 
 
   deleteProductByID(id: string): Observable<any> {
-    const headers = new HttpHeaders().set('Authorization', `${token}`);
+    const headers = new HttpHeaders().set('Authorization', `${this.token}`);
 
     return this.httpClinet.delete(`${this.baseURL}/${id}`, { headers });
   }

@@ -6,7 +6,6 @@ import { ProductsComponent } from '../Components/products/products.component';
 import { CartsComponent } from '../Components/carts/carts.component';
 import { ProductDetailsComponent } from '../Components/product-details/product-details.component';
 import { NotFoundComponent } from '../Components/not-found/not-found.component';
-import { ObservableComponent } from '../Components/observable/observable.component';
 import { AdminComponent } from '../Components/admin/admin.component';
 import { LoginComponent } from '../Components/login/login.component';
 import { RegisterComponent } from '../Components/register/register.component';
@@ -23,7 +22,6 @@ export const routes: Routes = [
   { path: "admin/:id", component: AdminComponent, title: "Admin" ,canActivate:[requireAuthGuard]},
   { path: "login", component: LoginComponent, title: "Login" },
   {path:"register",component:RegisterComponent,title:"Register"},
-  {path:"observable",component:ObservableComponent,title:"Observable"},
   {path:"productDetails/:prdID",component:ProductDetailsComponent,title:"ProductDetails"},
   {path:"**",component:NotFoundComponent,title:"NotFound"}
 ];
