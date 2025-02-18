@@ -1,0 +1,10 @@
+.cursor{
+  cursor: pointer;
+
+}
+i.cursor{
+  font-size: larger;
+  &:hover{
+    color:#eca2a8;
+  }
+}

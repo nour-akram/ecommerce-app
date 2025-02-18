@@ -1,0 +1,12 @@
+.signin {
+  background-color: #eca2a8;
+  color: white;
+}
+
+input {
+  &:focus {
+    border: none;
+    box-shadow: 2px 2px 5px #eca2a8,
+      -2px -2px 5px #eca2a8;
+  }
+}

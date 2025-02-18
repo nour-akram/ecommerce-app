@@ -1,0 +1,51 @@
+<div class="container mt-5 pt-5">
+  <form class="row w-75 m-auto shadow p-3" (ngSubmit)="saveProduct()" [formGroup]="productForm">
+    <div class="col-12 mb-3">
+      <label class="form-label">Product Name</label>
+      <input type="text" class="form-control" formControlName="name" />
+    </div>
+
+    <div class="col-6 mb-3">
+      <label class="form-label">Quantity</label>
+      <input type="number" class="form-control" formControlName="quantity" />
+    </div>
+
+    <div class="col-6 mb-3">
+      <label class="form-label">Price</label>
+      <input type="number" class="form-control" formControlName="price" />
+    </div>
+
+    <div class="col-6 mb-3">
+      <label class="form-label">Discount</label>
+      <input type="text" class="form-control" formControlName="discount" />
+    </div>
+
+    <div class="col-6 mb-3">
+      <label class="form-label">Category ID</label>
+      <select class="form-control" formControlName="categoryId">
+        <option value="" selected disabled>Select Category</option>
+        <option value="1">Dresses</option>
+        <option value="2">Skirts</option>
+        <option value="3">Accessories</option>
+        <option value="4">Pants</option>
+      </select>
+    </div>
+
+    <div class="col-6 mb-3">
+      <label class="form-label">Count</label>
+      <input type="number" class="form-control" formControlName="count" />
+    </div>
+
+    <div class="col-6 mb-3">
+      <label class="form-label">Product Image</label>
+      <input type="file" class="form-control" (change)="onFileSelected($event)" />
+    </div>
+
+    @if(errormsg){
+     <span class="text-danger">{{errormsg}}</span>
+    }
+    <div class="col-12 mt-4">
+      <button type="submit" class="btn btn-primary w-100" [disabled]="productForm.invalid || !selectedFile">Save Product</button>
+    </div>
+  </form>
+</div>

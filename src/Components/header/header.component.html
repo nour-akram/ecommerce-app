@@ -1,0 +1,29 @@
+<nav class="navbar bg-light p-0 position-fixed z-3 w-100 top-0">
+  <div
+    class="container-fluid align-items-center"
+  >
+    <div class="row  w-100 align-items-center py-1">
+      <div class=" col-1 ">
+        <img src="logo.jpg" alt="logo" class="img-fluid  w-50"  />
+      </div>
+      <ul class="navbar-brand mx-auto my-0 text-centerv d-flex col-5 justify-content-around">
+        <li class="list-unstyled"><a routerLink="/home"  routerLinkActive="active"  class="text-dark text-decoration-none fs-6 fw-semibold py-2">Home</a></li>
+        <li class="list-unstyled"><a routerLink="/about" routerLinkActive="active" class="text-dark text-decoration-none fs-6 fw-semibold py-2">About</a></li>
+        <li class="list-unstyled"><a routerLink="/contact"routerLinkActive="active" class="text-dark text-decoration-none fs-6 fw-semibold py-2">Contact</a></li>
+        <li class="list-unstyled"><a routerLink="/products" routerLinkActive="active" class="text-dark text-decoration-none fs-6 fw-semibold py-2">Products</a></li>
+        <li class="list-unstyled"><a routerLink="/admin" routerLinkActive="active" class="text-dark text-decoration-none fs-6 fw-semibold py-2">Admin</a></li>
+        @if(!isLoggedIn){
+          <li class="list-unstyled"><a routerLink="/login" routerLinkActive="active" class="text-dark text-decoration-none fs-6 fw-semibold py-2">Login</a></li>
+          <li class="list-unstyled"><a routerLink="/register" routerLinkActive="active" class="text-dark text-decoration-none fs-6 fw-semibold py-2">Register</a></li>
+        }@else{
+          <li class="list-unstyled" (click)="logout()"><a  routerLinkActive="active" class="text-dark text-decoration-none fs-6 fw-semibold py-2">Logout</a></li>
+        }
+        <li class="list-unstyled"><a routerLink="/observable" routerLinkActive="active" class="text-dark text-decoration-none fs-6 fw-semibold py-2">Observable</a></li>
+      </ul>
+      <a routerLink="/carts" class="text-decoration-none text-dark mail-link col-2 text-center ">
+        <!-- <app-toggle-theme></app-toggle-theme> -->
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </div>
+  </div>
+</nav>

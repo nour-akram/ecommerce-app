@@ -1,0 +1,67 @@
+.logo{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+
+}
+.card{
+  cursor: pointer;
+  overflow: hidden;
+}
+.client{
+  background-image: linear-gradient(to right, salmon, turquoise);
+    color: transparent;
+    background-clip: text;
+}
+.thanksMesage{
+  text-transform: capitalize;
+  padding: 20px;
+}
+.btn:disabled{
+ cursor: not-allowed !important;
+}
+.cardQuntity{
+  font-size: 12px;
+}
+// .quntity{
+//   background-color: yellow;
+// }
+select:focus,select:active{
+  border: none;
+}
+
+.BUY{
+  color: #f8d7da;
+}
+.btnmore{
+  color: #f8d7da;
+}
+
+.delete{
+  text-decoration:line-through;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width:50%;
+  margin:auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.confirm{
+  background:#eca2a8;
+}

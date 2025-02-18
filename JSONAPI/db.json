@@ -1,0 +1,25 @@
+{
+  "posts": [
+    { "id": "1", "title": "First Post", "views": 100 },
+    { "id": "2", "title": "Second Post", "views": 200 },
+    { "id": "3", "title": "Third Post", "views": 150 },
+    { "id": "4", "title": "Fourth Post", "views": 250 },
+    { "id": "5", "title": "Fifth Post", "views": 300 }
+  ],
+  "comments": [
+    { "id": "1", "text": "Great post!", "postId": "1" },
+    { "id": "2", "text": "Very helpful, thanks!", "postId": "1" },
+    { "id": "3", "text": "Nice article!", "postId": "2" },
+    { "id": "4", "text": "I learned a lot!", "postId": "2" },
+    { "id": "5", "text": "Thanks for sharing.", "postId": "3" }
+  ],
+  "users": [
+    { "id": "1", "name": "John Doe", "email": "john@example.com" },
+    { "id": "2", "name": "Jane Smith", "email": "jane@example.com" }
+  ],
+  "profile": {
+    "name": "typicode",
+    "bio": "Developer of json-server",
+    "website": "https://mywebsite.com"
+  }
+}

@@ -1,0 +1,13 @@
+// .table{
+//  background-color:#f8d7da;
+// }
+
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.removeCart{
+  background-color: #f8d7da;
+}
